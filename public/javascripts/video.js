@@ -31,22 +31,7 @@ webcam
 snap.addEventListener('click', () => {
   console.log("clicked");
   picture = webcam.snap();
-  webcamElement.style.display = "none";
-  canvasElement.style.display = "block";
-  snap.style.display = "none";
-  console.log(picture);
-  result.style.display = "flex";
-  if(smile)
-    yesOrNo.innerHTML = "웃으셨습니다. ^^"
-  else
-    yesOrNo.innerHTML = "웃지 않으셨습니다. ㅠㅠ"
-
-  //smileTotalNumber.innerHTML = smile_total + "회";
-  //smileTodayNumber.innerHTML = smile_today + "회";
-
-  smileTodayProgress.max = average;
-
-  tag();
+  sendPost();
 });
 
 function tag () {
